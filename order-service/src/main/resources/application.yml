@@ -1,0 +1,37 @@
+server:
+  port: 8200
+
+spring:
+  application:
+    name: order-service
+  data:
+    mongodb:
+      uri: mongodb+srv://admin:zlwOj8Aqje5NxifT@cluster0.kdvjrko.mongodb.net/cluster0
+  config:
+    import: optional:configserver:http://localhost:8888
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+logging:
+  pattern:
+    level:%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]
+
+rabbitmq:
+  queue:
+    name:
+      order: order_queue
+      email: email_queue
+  exchange:
+    name: order_exchange
+  routing:
+    key:
+      order: order_routing_key
+      email: email_routing_key
