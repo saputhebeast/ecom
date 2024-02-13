@@ -4,6 +4,11 @@
 ```
 docker run -p 9411:9411 openzipkin/zipkin
 ```
+## Run RabbitMQ
+```
+docker run --rm -it -p 15672:15672 -p 5672:5672 rabbitmq:3.12-management
+```
+
 ## Ports
 | Service          | Port |
 |------------------|------|
@@ -14,3 +19,4 @@ docker run -p 9411:9411 openzipkin/zipkin
 | Identity Service | 8000 |
 | Item Service     | 8100 |
 | Order Service    | 8200 |
+| Email Service    | 8300 |
