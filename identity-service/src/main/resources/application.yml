@@ -1,0 +1,30 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: identity-service
+  data:
+    mongodb:
+      uri: mongodb+srv://admin:zlwOj8Aqje5NxifT@cluster0.kdvjrko.mongodb.net/cluster0
+  config:
+    import: optional:configserver:http://localhost:8888
+
+jwt:
+  signing:
+    key: 413F4428472B4B6250655368566D5970337336763979244226452948404D6351
+    expirationMs: 3600000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+logging:
+  pattern:
+    level:%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]
