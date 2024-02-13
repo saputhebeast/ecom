@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/v1/order")
+@RequestMapping("/api/v1/order")
 public class OrderController {
 
     private final OrderProducer orderProducer;
