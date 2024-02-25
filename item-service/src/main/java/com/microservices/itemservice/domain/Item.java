@@ -1,7 +1,6 @@
 package com.microservices.itemservice.domain;
 
-import com.microservices.itemservice.dto.FrequentQuestion;
-import com.microservices.itemservice.dto.Specification;
+import com.microservices.itemservice.dto.types.Category;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -26,10 +25,8 @@ public class Item {
     private String title;
     private List<String> images;
     private String description;
-    private Specification specifications;
+    private Category category;
     private double price;
-    private List<FrequentQuestion> faqs;
-    private List<String> additionalFeatures;
     private Long quantity;
 
 }

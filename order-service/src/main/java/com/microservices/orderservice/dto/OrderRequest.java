@@ -5,11 +5,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class OrderEvent {
+public class OrderRequest {
+    private String user;
+    private List<Products> products;
+    private double totalPrice;
     private Status status;
-    private String message;
-    private OrderRequest orderRequest;
 }
