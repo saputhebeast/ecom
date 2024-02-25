@@ -10,14 +10,5 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka
 
-management:
-  tracing:
-    sampling:
-      probability: 1.0
-
-logging:
-  pattern:
-    level:%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]
-
 jwt:
   secret: 413F4428472B4B6250655368566D5970337336763979244226452948404D6351
