@@ -7,8 +7,6 @@ spring:
   data:
     mongodb:
       uri: mongodb+srv://admin:zlwOj8Aqje5NxifT@cluster0.kdvjrko.mongodb.net/cluster0
-  config:
-    import: optional:configserver:http://localhost:8888
 
 eureka:
   client:
