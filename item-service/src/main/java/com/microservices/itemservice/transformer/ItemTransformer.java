@@ -5,8 +5,6 @@ import com.microservices.itemservice.dto.ItemRequestDto;
 import com.microservices.itemservice.dto.ItemResponseDto;
 import org.springframework.stereotype.Component;
 
-import java.util.stream.Collectors;
-
 @Component
 public class ItemTransformer {
 

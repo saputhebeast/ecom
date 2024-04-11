@@ -2,7 +2,6 @@ package com.microservices.orderservice.mapper;
 
 import com.microservices.orderservice.dto.OrderRequest;
 import com.microservices.orderservice.model.Order;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
