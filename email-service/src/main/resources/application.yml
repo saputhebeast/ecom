@@ -1,0 +1,14 @@
+server:
+  port: 8300
+
+spring:
+  application:
+    name: email-service
+  data:
+    mongodb:
+      uri: mongodb+srv://admin:zlwOj8Aqje5NxifT@cluster0.kdvjrko.mongodb.net/cluster0
+
+rabbitmq:
+  queue:
+    name:
+      email: email_queue

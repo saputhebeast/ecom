@@ -1,0 +1,19 @@
+server:
+  port: 8200
+
+spring:
+  application:
+    name: order-service
+  data:
+    mongodb:
+      uri: mongodb+srv://admin:zlwOj8Aqje5NxifT@cluster0.kdvjrko.mongodb.net/cluster0
+
+rabbitmq:
+  queue:
+    name:
+      email: email_queue
+  exchange:
+    name: order_exchange
+  routing:
+    key:
+      email: email_routing_key
